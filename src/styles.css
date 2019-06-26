@@ -5,6 +5,16 @@
     font-family: 'Dosis', sans-serif;
 }
 
+router-outlet ~ * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin-left: 70px;
+}
+
 a {
     text-decoration: none;
 }
