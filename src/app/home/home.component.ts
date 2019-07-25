@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   animeText() {
-    this.textWrapper.nativeElement.innerHTML = this.textWrapper.nativeElement.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+    // tslint:disable-next-line: max-line-length
+    this.textWrapper.nativeElement.innerHTML = this.textWrapper.nativeElement.textContent.replace(/([^\x00-\x80]|\w)/g, '<span class=\'letter\'>$&</span>');
 
     anime.timeline({loop: false}).add({
       targets: '.title .letter',
