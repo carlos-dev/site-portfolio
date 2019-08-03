@@ -66,6 +66,13 @@ li {
     width: 1000px;
 }
 
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #fff;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #fff;
+}
 
 @media (max-width: 1440px) {
     h2 {
@@ -78,3 +85,5 @@ li {
         font-size: 36px;
     }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

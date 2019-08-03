@@ -1,3 +1,45 @@
-<p>
-  contato works!
-</p>
+<form>
+
+  <mat-card>
+    <h3>Material Form</h3>
+
+    <mat-form-field>
+      <input matInput placeholder="Nome" type="text" [formControl]="nameFormControl" />
+      <mat-error *ngIf="nameFormControl.hasError('minlength')">
+        O nome deve ter pelo menos 2 caracteres.
+      </mat-error>
+      <mat-error *ngIf="nameFormControl.hasError('required')">
+        O nome é obrigatório
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email" type="email" [formControl]="emailFormControl"/>
+      <mat-error *ngIf="emailFormControl.hasError('email')">
+        Insira um email válido
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        O email é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Comentário" [formControl]="commentFormControl"></textarea>
+      <mat-error *ngIf="commentFormControl.hasError('minlength')">
+        Insira pelo menos 10 caracteres
+      </mat-error>
+      <mat-error *ngIf="commentFormControl.hasError('required')">
+        O campo é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      [disabled]="emailFormControl.invalid || nameFormControl.invalid || loading"
+      color="primary"
+      (click)="register()"
+    >
+      {{buttionText}}
+    </button>
+  </mat-card>
+</form>
