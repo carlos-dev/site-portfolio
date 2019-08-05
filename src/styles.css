@@ -66,10 +66,12 @@ li {
     width: 1000px;
 }
 
+.mat-form-field.mat-focused .mat-form-field-label,
 .mat-form-field-appearance-legacy .mat-form-field-label {
     color: #fff;
 }
 
+.mat-form-field.mat-focused .mat-form-field-ripple,
 .mat-form-field-appearance-legacy .mat-form-field-underline {
     background-color: #fff;
 }

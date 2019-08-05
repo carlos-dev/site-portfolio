@@ -4,11 +4,23 @@
     }
 }
 
+@keyframes autofill {
+    to {
+        background: transparent;
+    }
+}
+
 input:-webkit-autofill {
     animation-name: autofill;
     -webkit-animation-name: autofill;
     animation-fill-mode: both;
     -webkit-animation-fill-mode: both;
+    -webkit-text-fill-color: #fff;
+}
+
+input:-internal-autofill-selected,
+input {
+    color: #fff !important;
 }
 
 .mat-card {
