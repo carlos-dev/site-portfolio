@@ -1,0 +1,15 @@
+.portfolio-area {
+    display: flex;
+}
+
+.portfolio-element {
+    position: relative;
+}
+
+.portfolio-img {
+    width: 300px;
+}
+
+.portfolio-logo {
+    position: absolute;
+}

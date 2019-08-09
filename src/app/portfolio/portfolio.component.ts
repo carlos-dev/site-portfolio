@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  projects = [
+    {
+      pathImg: '../../assets/img/haytek.png',
+      logo: '../../assets/img/logo-haytek.png',
+      alt: 'haytek'
+    },
+    {
+      pathImg: '../../assets/img/unicarioca.png',
+      logo: '../../assets/img/logo-unicarioca.png',
+      alt: 'unicarioca'
+    }
+  ];
+
+  constructor() { 
+    console.log(this.projects);
+  }
 
   ngOnInit() {
   }

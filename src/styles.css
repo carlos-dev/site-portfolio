@@ -14,6 +14,14 @@ router-outlet ~ * {
 body {
     margin-left: 70px;
     background: #4E2FBF;
+    overflow-x: hidden;
+}
+
+app-home,
+app-skills,
+app-portfolio,
+app-contato {
+    margin: 100px 0 0 70px;
 }
 
 a {
@@ -27,7 +35,6 @@ p, h2 {
 h2 {
     font-size: 50px;
     width: 55%;
-    margin: 100px 0 0 70px;
 }
 
 .flex {

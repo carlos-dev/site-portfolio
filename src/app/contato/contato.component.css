@@ -1,3 +1,9 @@
+.mat-card h2 {
+    width: 85%;
+    font-size: 20px;
+    margin-left: 0;
+}
+
 @-webkit-keyframes autofill {
     to {
         background: transparent;
@@ -24,5 +30,11 @@ input {
 }
 
 .mat-card {
+    width: 55%;
+    margin: 100px 0 0 100px;
     background: transparent;
+}
+
+.mat-form-field {
+    display: block;
 }
