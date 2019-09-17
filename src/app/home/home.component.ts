@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.animeText();
-    this.animeSvg();
+    //this.animeSvg();
   }
 
   animeText() {

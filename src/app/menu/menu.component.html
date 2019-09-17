@@ -1,34 +1,41 @@
-<nav class="flex sp-bt flex-column">
-  <div class="logo">
-    <img src="../../assets/img/code.svg" alt="">
-  </div>
+<div>
+  <nav class="flex sp-bt flex-column menu">
+    <div class="logo">
+      <img src="../../assets/img/code.svg" alt="">
+    </div>
+  
+    <ul>
+      <li> 
+        <a routerLink="/" class="nav-link">
+          <img src="../../assets/img/home.svg" alt="">
+          Home
+        </a> 
+      </li>
+      <li> 
+        <a routerLink="competencias" class="nav-link">
+          <img src="../../assets/img/skill.svg" alt="">
+          skills
+        </a> 
+      </li>
+      <li> 
+        <a routerLink="portfolio" class="nav-link">
+          <img src="../../assets/img/portfolio.svg" alt="">
+          portfolio
+        </a> 
+      </li>
+      <li> 
+        <a routerLink="contato" class="nav-link">
+          <img src="../../assets/img/contact.svg" alt="">
+          contato
+        </a> 
+      </li>
+    </ul>
+    <div></div>
+  </nav>
 
-  <ul>
-    <li> 
-      <a routerLink="/" class="nav-link">
-        <img src="../../assets/img/home.svg" alt="">
-        Home
-      </a> 
-    </li>
-    <li> 
-      <a routerLink="competencias" class="nav-link">
-        <img src="../../assets/img/skill.svg" alt="">
-        skills
-      </a> 
-    </li>
-    <li> 
-      <a routerLink="portfolio" class="nav-link">
-        <img src="../../assets/img/portfolio.svg" alt="">
-        portfolio
-      </a> 
-    </li>
-    <li> 
-      <a routerLink="contato" class="nav-link">
-        <img src="../../assets/img/contact.svg" alt="">
-        contato
-      </a> 
-    </li>
-  </ul>
+  <button mat-icon-button mat-raised-button class=
+  "open-menu" aria-label="Mostrar menu" (click)="openMenu($event)" >
+      <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
 
-  <div></div>
-</nav>
+</div>

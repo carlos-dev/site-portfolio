@@ -18,6 +18,7 @@ nav {
 .nav-link {
     height: 42px;
     color: #fff;
+    font-size: 14px;
     display: flex;
     line-height: 12px;
     margin-bottom: 10px;
@@ -34,4 +35,28 @@ nav {
 
 .nav-link:hover img {
     margin-top: -39px;
+}
+
+.mat-icon-button {
+    background: #140159;
+    border-radius: 3px;
+}
+
+.mat-raised-button {
+    color: #fff;
+}
+
+.open-menu {
+    transition: left .4s ease;
+    left: 0;
+}
+
+.open-menu.active {
+    left: 60px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        left: -64px;
+    }
 }
