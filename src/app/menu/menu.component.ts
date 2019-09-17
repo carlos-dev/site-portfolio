@@ -7,15 +7,22 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  @ViewChild('title') menu: ElementRef;
 
-  constructor() { }
+  constructor() {}
+
+  @ViewChild('menu') menu: ElementRef;
 
   ngOnInit() {
+    console.log(document.querySelector('#menu'));
   }
 
   openMenu(element) {
-    console.log(this.menu)
+    console.log(this.menu);
     element.target.classList.add('active');
+    this.showMenu();
+  }
+
+  showMenu() {
+    document.querySelector('#menu').classList.add('active');
   }
 }

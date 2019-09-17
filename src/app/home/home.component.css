@@ -1,0 +1,12 @@
+.svg-morph {
+    width: 700px;
+    position: absolute;
+    right: 0;
+    bottom: -140px;
+}
+
+@media(max-width: 1024px) {
+    .svg-morph {
+        display: none;
+    }
+}

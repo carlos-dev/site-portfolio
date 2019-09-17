@@ -10,6 +10,11 @@ nav {
     box-shadow: 1px 0px 2px #2c2671;
 }
 
+nav.active {
+    transition: left .4s ease;
+    left: 0;
+}
+
 .logo {
     display: flex;
     justify-content: center;

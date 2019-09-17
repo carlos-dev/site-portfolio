@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body {
     background: #4E2FBF;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -79,10 +79,6 @@ li {
     display: inline-block;
     line-height: 1em;
     transform-origin: 0 0;
-}
-
-.svg-morph {
-    width: 1000px;
 }
 
 .mat-form-field.mat-focused .mat-form-field-label,
