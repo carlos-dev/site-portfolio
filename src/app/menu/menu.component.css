@@ -60,6 +60,14 @@ nav.active {
     left: 60px;
 }
 
+.open-menu .mat-icon {
+    transition: all .5s ease ;
+}
+
+.open-menu.active .mat-icon {
+    transform: rotate(180deg);
+}
+
 @media (max-width: 600px) {
     nav {
         left: -64px;

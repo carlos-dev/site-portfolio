@@ -1,0 +1,5 @@
+# src/_redirects
+/home              /
+/competencias  /competencias
+/portfolio     /portfolio
+/contato     /contato

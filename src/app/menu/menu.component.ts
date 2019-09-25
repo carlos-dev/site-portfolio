@@ -14,15 +14,16 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     console.log(document.querySelector('#menu'));
+    this.openMenu();
   }
 
-  openMenu(element) {
+
+  openMenu() {
     console.log(this.menu);
-    element.target.classList.add('active');
-    this.showMenu();
-  }
-
-  showMenu() {
-    document.querySelector('#menu').classList.add('active');
+    let btnOpenMenu = document.querySelector('.open-menu');
+    btnOpenMenu.addEventListener('click', function() {
+      btnOpenMenu.classList.add('active');
+      document.querySelector('#menu').classList.add('active');
+    });
   }
 }
