@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
       duration: 3000,
       direction: 'alternate',
       autoplay: true,
-      easing: 'easeInOutExpo',
+      easing: 'easeInOutQuart',
       elasticity: 10,
       loop: true
     });

@@ -7,6 +7,13 @@
 
 @media(max-width: 1024px) {
     .svg-morph {
-        display: none;
+        width: 500px;
+    }
+}
+
+@media(max-width: 768px) {
+    .svg-morph {
+        width: 350px;
+        bottom: -90px;
     }
 }
