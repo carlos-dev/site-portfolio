@@ -57,13 +57,11 @@ li {
     list-style-type: none;
 }
 
-.btn {
+.btn.mat-raised-button {
     background: rgb(242,211,118);
     background: linear-gradient(90deg, rgba(242,211,118,1) 0%, rgba(242,118,118,1) 100%);
-}
-
-.mat-raised-button {
     font-size: 17px;
+    margin-top: 10px;
 }
 
 .title .text-wrapper {
@@ -100,6 +98,12 @@ li {
 @media (max-width: 1366px) {
     h2 {
         font-size: 36px;
+    }
+}
+
+@media (max-width: 1040px) {
+    app-contato {
+        padding: 10px 0 0 61px;
     }
 }
 
