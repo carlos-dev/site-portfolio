@@ -1,46 +1,47 @@
-<form>
-
-  <mat-card>
-    <h2 class="title-contact">Se tiver alguma dúvida, sugestão ou algum trampo que quer eu faça, não hesite em entrar em contato! Preencha o formulário que eu te responderei o mais rápido possível.</h2>
-
-    <mat-form-field>
-      <input matInput placeholder="Nome" type="text" [formControl]="nameFormControl" />
-      <mat-error *ngIf="nameFormControl.hasError('minlength')">
-        O nome deve ter pelo menos 2 caracteres.
-      </mat-error>
-      <mat-error *ngIf="nameFormControl.hasError('required')">
-        O nome é obrigatório
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput placeholder="Email" type="email" [formControl]="emailFormControl"/>
-      <mat-error *ngIf="emailFormControl.hasError('email')">
-        Insira um email válido
-      </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        O email é <strong>obrigatório</strong>
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <textarea matInput placeholder="Comentário" [formControl]="commentFormControl"></textarea>
-      <mat-error *ngIf="commentFormControl.hasError('minlength')">
-        Insira pelo menos 10 caracteres
-      </mat-error>
-      <mat-error *ngIf="commentFormControl.hasError('required')">
-        O campo é <strong>obrigatório</strong>
-      </mat-error>
-    </mat-form-field>
-
-    <button
-      mat-raised-button
-      [disabled]="emailFormControl.invalid || nameFormControl.invalid || commentFormControl.invalid || loading"
-      color="primary"
-      class="btn"
-      (click)="register()"
-    >
-      {{buttionText}}
-    </button>
-  </mat-card>
-</form>
+<main>
+  <form>
+    <mat-card>
+      <h2 class="title-contact">Se tiver alguma dúvida, sugestão ou algum trampo que quer eu faça, não hesite em entrar em contato! Preencha o formulário que eu te responderei o mais rápido possível.</h2>
+  
+      <mat-form-field>
+        <input matInput placeholder="Nome" type="text" [formControl]="nameFormControl" />
+        <mat-error *ngIf="nameFormControl.hasError('minlength')">
+          O nome deve ter pelo menos 2 caracteres.
+        </mat-error>
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+          O nome é obrigatório
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput placeholder="Email" type="email" [formControl]="emailFormControl"/>
+        <mat-error *ngIf="emailFormControl.hasError('email')">
+          Insira um email válido
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          O email é <strong>obrigatório</strong>
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Comentário" [formControl]="commentFormControl"></textarea>
+        <mat-error *ngIf="commentFormControl.hasError('minlength')">
+          Insira pelo menos 10 caracteres
+        </mat-error>
+        <mat-error *ngIf="commentFormControl.hasError('required')">
+          O campo é <strong>obrigatório</strong>
+        </mat-error>
+      </mat-form-field>
+  
+      <button
+        mat-raised-button
+        [disabled]="emailFormControl.invalid || nameFormControl.invalid || commentFormControl.invalid || loading"
+        color="primary"
+        class="btn"
+        (click)="register()"
+      >
+        {{buttionText}}
+      </button>
+    </mat-card>
+  </form>
+</main>

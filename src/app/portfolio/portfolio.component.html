@@ -1,11 +1,13 @@
-<div class="portfolio">
-  <div class="portfolio-area">
-    <div class="portfolio-element" *ngFor="let project of projects">
-      <img src={{project.pathImg}} class="portfolio-img" alt={{project.alt}}>
-  
-      <div class="portfolio-logo">
-        <img src={{project.logo}} alt={{project.alt}}>
+<main>
+  <div class="portfolio">
+    <div class="portfolio-area">
+      <div class="portfolio-element" *ngFor="let project of projects">
+        <img src={{project.pathImg}} class="portfolio-img" alt={{project.alt}}>
+    
+        <div class="portfolio-logo">
+          <img src={{project.logo}} alt={{project.alt}}>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</main>
