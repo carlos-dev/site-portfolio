@@ -6,6 +6,7 @@ import Flickity from 'flickity';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css']
 })
+
 export class PortfolioComponent implements OnInit {
   @ViewChild('gallery') gallery: ElementRef;
 
@@ -27,7 +28,29 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.gallery);
+    this.galleryProjects();
+  }
+
+  galleryProjects() {
+    let galleryElement = this.gallery.nativeElement;
+    let flkty = new Flickity( galleryElement, {
+      imagesLoaded: true,
+      percentPosition: false,
+    });
+
+    let imgs = galleryElement.querySelectorAll('.portfolio-element img');
+    let docStyle = document.documentElement.style;
+    let transformProp = typeof docStyle.transform === 'string' ?
+    'transform' : 'WebkitTransform';
+    console.log(transformProp)
+
+    flkty.on( 'scroll', () => {
+      flkty.slides.forEach( ( slide, i ) => {
+        let img = imgs[i];
+        let x = ( slide.target + flkty.x ) * -1 / 3;
+        img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+      });
+    });
   }
 
 }

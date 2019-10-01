@@ -1,12 +1,20 @@
 <main>
-  <div class="portfolio" #gallery>
-    <div class="portfolio-area">
-      <div class="portfolio-element" *ngFor="let project of projects">
+  <div class="portfolio">
+    <div class="portfolio-area" #gallery>
+      <!-- <div class="portfolio-element" *ngFor="let project of projects">
         <img src={{project.pathImg}} class="portfolio-img" alt={{project.alt}}>
     
         <div class="portfolio-logo">
           <img src={{project.logo}} alt={{project.alt}}>
         </div>
+      </div> -->
+
+      <div class="portfolio-element" >
+        <img src="../../assets/img/haytek.png" class="portfolio-img">
+      </div>
+
+      <div class="portfolio-element" >
+        <img src="../../assets/img/unicarioca.png" class="portfolio-img">
       </div>
     </div>
   </div>
