@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import Flickity from 'flickity';
+import '../../../node_modules/flickity/css/flickity.css';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,7 +8,7 @@ import Flickity from 'flickity';
   styleUrls: ['./portfolio.component.css']
 })
 
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
   @ViewChild('gallery') gallery: ElementRef;
 
   projects = [
@@ -20,14 +21,25 @@ export class PortfolioComponent implements OnInit {
       pathImg: '../../assets/img/unicarioca.png',
       logo: '../../assets/img/logo-unicarioca.png',
       alt: 'unicarioca'
+    },
+    {
+      pathImg: '../../assets/img/netgift.png',
+      logo: '../../assets/img/logo-netgift.png',
+      alt: 'netgift'
+    },
+    {
+      pathImg: '../../assets/img/paschoalotto.png',
+      logo: '../../assets/img/logo-paschoalotto.png',
+      alt: 'paschoalotto'
     }
   ];
 
-  constructor() { 
-    console.log(this.projects);
-  }
+  constructor() {}
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit(): void {
     this.galleryProjects();
   }
 
@@ -38,16 +50,15 @@ export class PortfolioComponent implements OnInit {
       percentPosition: false,
     });
 
-    let imgs = galleryElement.querySelectorAll('.portfolio-element img');
+    let imgs = galleryElement.querySelectorAll('.portfolio-element .portfolio-img');
     let docStyle = document.documentElement.style;
     let transformProp = typeof docStyle.transform === 'string' ?
     'transform' : 'WebkitTransform';
-    console.log(transformProp)
 
     flkty.on( 'scroll', () => {
       flkty.slides.forEach( ( slide, i ) => {
         let img = imgs[i];
-        let x = ( slide.target + flkty.x ) * -1 / 3;
+        let x = ( slide.target + flkty.x ) * -1 / 4;
         img.style[ transformProp ] = 'translateX(' + x  + 'px)';
       });
     });
