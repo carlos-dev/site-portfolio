@@ -6,13 +6,12 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-body {
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
     background: #4E2FBF;
     overflow: hidden;
 }
-
 
 router-outlet ~ * {
     position: absolute;
@@ -20,11 +19,13 @@ router-outlet ~ * {
     width: 100%;
 }
 
-app-home,
-app-skills,
-app-portfolio,
-app-contato {
+main {
     padding: 100px 0 0 70px;
+    transition: padding .4s ease;
+}
+
+main.active {
+    padding-left: 70px
 }
 
 a {
@@ -57,13 +58,11 @@ li {
     list-style-type: none;
 }
 
-.btn {
+.btn.mat-raised-button {
     background: rgb(242,211,118);
     background: linear-gradient(90deg, rgba(242,211,118,1) 0%, rgba(242,118,118,1) 100%);
-}
-
-.mat-raised-button {
     font-size: 17px;
+    margin-top: 10px;
 }
 
 .title .text-wrapper {
@@ -107,5 +106,22 @@ li {
     h2 {
         max-width: 77%;
         font-size: 30px;
+    }
+
+    main {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px 10px 0 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    h2 {
+        max-width: 90%;
+        font-size: 25px;
     }
 }

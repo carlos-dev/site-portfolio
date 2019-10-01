@@ -1,7 +1,9 @@
-.mat-card h2 {
-    width: 85%;
-    font-size: 20px;
-    margin-left: 0;
+.title-contact {
+    max-width: 100%;
+    width: 90%;
+    font-size: 25px;
+    line-height: 24px;
+    margin: 0 0 20px 0;
 }
 
 @-webkit-keyframes autofill {
@@ -30,11 +32,41 @@ input {
 }
 
 .mat-card {
-    width: 55%;
-    margin: 100px 0 0 100px;
+    max-width: 940px;
+    margin: 0 0 0 100px;
     background: transparent;
 }
 
 .mat-form-field {
     display: block;
+}
+
+.mat-error {
+    padding-top: 5px;
+}
+
+@media (max-width: 1240px) {
+    .mat-card {
+        margin: auto;
+    }
+
+    .mat-card:not([class*=mat-elevation-z]) {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-contact {
+        font-size: 21px;
+        line-height: 23px;
+    }
+}
+
+@media (max-width: 500px) {
+    .title-contact {
+        width: 100%;
+        font-size: 19px;
+        line-height: 21px;
+        margin: 0px
+    }
 }
