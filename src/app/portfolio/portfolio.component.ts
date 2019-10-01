@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import Flickity from 'flickity';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  @ViewChild('gallery') gallery: ElementRef;
 
   projects = [
     {
@@ -25,6 +27,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.gallery);
   }
 
 }
