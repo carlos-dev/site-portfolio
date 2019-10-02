@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,7 +6,8 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
+  @ViewChild('menu') menu: ElementRef;
+  @ViewChild('navLink') navLink: ElementRef;
   constructor() {}
 
   ngOnInit() {
@@ -14,26 +15,29 @@ export class MenuComponent implements OnInit {
     this.setMainActive();
   }
 
-
   openMenu() {
     const btnOpenMenu = document.querySelector('.open-menu');
 
     btnOpenMenu.addEventListener('click', () => {
-      btnOpenMenu.classList.toggle('active');
-      document.querySelector('#menu').classList.toggle('active');
-      document.querySelector('main').classList.toggle('active');
+      if (!document.querySelector('#menu').classList.contains('active')) {
+        btnOpenMenu.classList.add('active');
+        document.querySelector('#menu').classList.add('active');
+        document.querySelector('main').classList.add('active');
+      } else {
+        btnOpenMenu.classList.remove('active');
+        document.querySelector('#menu').classList.remove('active');
+        document.querySelector('main').classList.remove('active');
+      }
     });
   }
 
   setMainActive() {
-    const navLink = document.querySelector('.nav-link');
-
-    navLink.addEventListener('click', () => {
-      if (document.querySelector('#menu').classList.contains('active')) {
-        document.querySelector('main').classList.add('active');
-      } else {
-        document.querySelector('main').classList.remove('active');
-      }
+    this.navLink.nativeElement.addEventListener('click', () => {
+      document.querySelector('main').classList.add('active');
+      // if (document.querySelector('#menu').classList.contains('active')) {
+      // } else {
+      //   document.querySelector('main').classList.remove('active');
+      // }
     });
   }
 }

@@ -2,3 +2,27 @@
     /* width: 60% !important;
     height: 95% !important; */
 }
+
+main {
+    padding-top: 0; 
+}
+
+@media (max-height: 940px) and (max-width: 1920px) {
+    canvas {
+        height: 875px !important;
+    }
+}
+
+@media (max-height: 768px) {
+    canvas {
+        width: 1287px !important; 
+        height: 568px !important;
+    }
+}
+
+@media (max-width: 1024px)  {
+    canvas {
+        width: 100% !important; 
+        height: 100% !important;
+    }
+}

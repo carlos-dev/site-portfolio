@@ -30,7 +30,7 @@ export class SkillsComponent implements OnInit {
             labels: ['HTML', 'CSS', 'Sass', 'Javascript', 'Jquery', 'Angular', 'Typescript', 'React', 'React Native'],
             datasets: [{
                 label: 'Nível',
-                data: [90, 85, 60, 80, 80, 50, 45, 40, 30],
+                data: [90, 85, 60, 70, 70, 50, 45, 40, 30],
                 backgroundColor: [
                     'rgba(228, 77, 38, 0.5)',
                     'rgba(80, 173, 234, 0.5)',

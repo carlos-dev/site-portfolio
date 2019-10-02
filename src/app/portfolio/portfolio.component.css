@@ -1,3 +1,7 @@
+.portfolio h2 {
+  margin-bottom: 30px;
+}
+
 .portfolio-area {
   display: flex;
   outline: none;
@@ -108,7 +112,6 @@ https://flickity.metafizzy.co
 .flickity-button:disabled {
   opacity: 0.3;
   cursor: auto;
-  /* prevent disabled button from capturing pointer up event. #716 */
   pointer-events: none;
 }
 
@@ -123,13 +126,11 @@ https://flickity.metafizzy.co
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  /* vertically center */
   transform: translateY(-50%);
 }
 
 .flickity-prev-next-button.previous { left: 10px; }
 .flickity-prev-next-button.next { right: 10px; }
-/* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
   right: 10px;
@@ -175,4 +176,36 @@ https://flickity.metafizzy.co
 
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .portfolio-img {
+    width: 520px;
+  }
+}
+
+@media (max-width: 540px) {
+  .portfolio-img {
+    width: 100vw;
+  }
+
+  .portfolio-logo img {
+    width: 33%;
+  }
+
+  .flickity-prev-next-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .flickity-prev-next-button .flickity-button-icon {
+    left: 23%;
+    top: 24%;
+    width: 50%;
+    height: 52%;
+  }
+}
+
+@media (max-width: 450px) {
+
 }
