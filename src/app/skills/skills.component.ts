@@ -23,7 +23,7 @@ export class SkillsComponent implements OnInit {
     let ctx = document.getElementById('skills-graphic');
     Chart.defaults.global.defaultFontSize = 16;
     Chart.defaults.global.animation.duration = 3000;
-
+    
     let myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -64,7 +64,6 @@ export class SkillsComponent implements OnInit {
                     }
                 }]
             },
-            
         }
     });
   }

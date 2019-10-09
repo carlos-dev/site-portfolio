@@ -13,16 +13,32 @@ main {
     }
 }
 
+@media (max-height: 900px) and (max-width: 1680px) {
+    canvas {
+        height: 825px !important;
+    }
+}
+
+@media (max-width: 1366px) {
+    canvas {
+        width: 100% !important;
+    }
+}
+
 @media (max-height: 768px) {
     canvas {
-        width: 1287px !important; 
         height: 568px !important;
     }
 }
 
 @media (max-width: 1024px)  {
     canvas {
-        width: 100% !important; 
         height: 100% !important;
+    }
+}
+
+@media (max-width: 768px)  {
+    canvas {
+        height: 50vh !important;
     }
 }
