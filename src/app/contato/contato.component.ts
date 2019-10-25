@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from "../Shared/http.service";
-import { FormControl, Validators } from "@angular/forms";
+import { HttpService } from '../Shared/http.service';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contato',
@@ -13,14 +13,14 @@ export class ContatoComponent implements OnInit {
 
   constructor(public http: HttpService) { }
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email
-  ]);
-
   nameFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(2)
+  ]);
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email
   ]);
 
   commentFormControl = new FormControl('', [
@@ -35,14 +35,14 @@ export class ContatoComponent implements OnInit {
   register() {
     this.loading = true;
     this.buttionText = 'Enviando...';
-    let user = {
+    const user = {
       name: this.nameFormControl.value,
       email: this.emailFormControl.value,
       comment: this.commentFormControl.value
     };
-    this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
+    this.http.sendEmail('http://localhost:3000/sendmail', user).subscribe(
       data => {
-        let res: any = data; 
+        const res: any = data;
         console.log(
           `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
         );

@@ -45,7 +45,7 @@ async function sendMail(user, callback) {
     from: user.email, // sender address
     to: 'carlosandre1572@gmail.com', // list of receivers
     subject: "Mensagem recebida 👻", // Subject line
-    html: `<h1>Hi ${user.name}</h1><br>
+    html: `<h1>Mensagem de ${user.name} - ${user.email}</h1><br>
     <h4>${user.comment}</h4>`
   };
 
